@@ -21,4 +21,8 @@ select Salary from employee_payroll where id = 3   /* salary of particular emplo
 
 select * from employee_payroll where StartDate BETWEEN CAST('2013-03-01' AS DATE) AND GETDATE() /* employee deatil b/w date range */
 
+alter table employee_payroll
+add Gender char(1)
+update employee_payroll set Gender= 'M' where name ='Ram' or name = 'Shyam' or name = 'Bhole'
+update employee_payroll set Gender= 'F' where name ='Durga'
 
