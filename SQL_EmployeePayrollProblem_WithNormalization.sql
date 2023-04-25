@@ -1,4 +1,5 @@
-CREATE TABLE employee (
+CREATE TABLE employee 
+(
   id INT PRIMARY KEY IDENTITY,
   name VARCHAR(40) NOT NULL,
   gender CHAR(1),
@@ -7,7 +8,8 @@ CREATE TABLE employee (
   start_date DATE NOT NULL
 )
 
-CREATE TABLE payroll (
+CREATE TABLE payroll
+(
   id INT PRIMARY KEY IDENTITY,
   employee_id INT NOT NULL,
   basic_pay FLOAT,
@@ -18,12 +20,14 @@ CREATE TABLE payroll (
   FOREIGN KEY (employee_id) REFERENCES employee(id)
 )
 
-CREATE TABLE department (
+CREATE TABLE department
+(
   id INT PRIMARY KEY IDENTITY,
   department_name VARCHAR(50) NOT NULL
 )
 
-CREATE TABLE employee_department (
+CREATE TABLE employee_department 
+(
   id INT PRIMARY KEY IDENTITY,
   employee_id INT NOT NULL,
   department_id INT NOT NULL,
